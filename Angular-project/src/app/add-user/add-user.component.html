@@ -1,0 +1,21 @@
+<div class="container" style="width: 70%;">
+  <h1 style="margin-top: 20px;">Add New User</h1>
+  <div *ngIf="isSubmitted" class="alert alert-success alert-dismissible fade show">
+    <strong>Success!</strong>
+  </div>
+  <form [formGroup]="register" (ngSubmit)="collection()">
+    <div class="mb-3 form-group">
+      <label class="form-label">UserName</label>
+      <input type="text" class="form-control" formControlName="username">
+    </div>
+    <div class="mb-3 form-group">
+      <label class="form-label">Email address</label>
+      <input type="email" class="form-control" formControlName="email">
+    </div>
+    <div class="mb-3 form-group">
+      <label class="form-label">Password</label>
+      <input type="password" class="form-control" formControlName="password">
+    </div>
+    <button type="submit" class="button">Add New User</button>
+  </form>
+</div>
